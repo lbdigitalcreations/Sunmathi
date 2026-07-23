@@ -172,13 +172,16 @@ main.container {
 /* ============================================
    HALL OF FAME CARDS
    ============================================ */
+/* ============================================
+   HALL OF FAME SCROLLER
+   ============================================ */
 #hall-of-fame-scroller {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding: 1rem 0.5rem;
-    gap: 1rem;
+    padding: 1rem 0.5rem 1.5rem;
+    gap: 1.25rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -187,17 +190,37 @@ main.container {
     display: none;
 }
 
+/* Mobile: one card nearly full-width */
 #hall-of-fame-scroller .snap-center {
     scroll-snap-align: center;
     flex-shrink: 0;
-    width: 82vw;
+    width: 85vw;
+    max-width: 340px;
 }
 
-#hall-of-fame-scroller img {
+/* Image container with fixed aspect ratio */
+.hall-card-img-wrap {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 3 / 4;       /* portrait ratio — best for face photos */
+    overflow: hidden;
+    border-radius: 0.6rem;
+    margin-bottom: 1rem;
+    background: #f0f0f0;
+}
+
+.hall-card-img-wrap img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 0.5rem;
+    object-position: center 15%;  /* show faces — 15% from top */
+    border-radius: 0.6rem;
+    transition: transform 0.35s ease, object-position 0.35s ease;
+    display: block;
+}
+
+.hall-card-img-wrap:hover img {
+    transform: scale(1.04);
+    object-position: center 20%;
 }
 
 /* ============================================
@@ -235,7 +258,8 @@ footer img {
     }
 
     #hall-of-fame-scroller .snap-center {
-        width: 45vw;
+        width: 44vw;   /* ~2 cards visible on tablet */
+        max-width: 280px;
     }
 
     main.container {
@@ -256,7 +280,8 @@ footer img {
     }
 
     #hall-of-fame-scroller .snap-center {
-        width: 30vw;
+        width: 28vw;   /* ~3 cards visible on laptop */
+        max-width: 320px;
     }
 
     .story-arc-item img {
@@ -284,7 +309,8 @@ footer img {
    ============================================ */
 @media (min-width: 1024px) {
     #hall-of-fame-scroller .snap-center {
-        width: 24vw;
+        width: 22vw;   /* ~4 cards visible on large screens */
+        max-width: 300px;
     }
 
     #lightgallery a {
