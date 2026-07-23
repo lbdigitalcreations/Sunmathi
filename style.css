@@ -233,16 +233,34 @@ main.container {
 }
 
 /* ============================================
-   FOOTER
+   FOOTER BRANDING RESPONSIVE STYLES
    ============================================ */
-footer {
-    padding: 2rem 1rem 1.5rem !important;
-    font-size: 0.9rem;
+.footer-brand-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    text-align: center;
 }
 
-footer img {
-    width: 70px !important;
-    height: 70px !important;
+.footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.3rem;
+}
+
+@media (min-width: 640px) {
+    .footer-brand-container {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    .footer-brand-text {
+        align-items: flex-start;
+        text-align: left;
+    }
 }
 
 /* ============================================
