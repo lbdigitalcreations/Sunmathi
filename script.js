@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- Birthday born at 1:15 PM on Aug 14, 2006 ---
-    const birthDate = new Date('2006-08-14T13:15:00');
-    // --- Party kicks off at 1:15 PM today ---
+    // --- Birthday born at 1:15 PM on July 23, 2008 ---
+    const birthDate = new Date('2008-07-23T13:15:00');
+    // --- Birthday surprise / party kicks off at 1:15 PM today ---
     const partyTime = new Date('2026-07-23T13:15:00');
     const countdownElement = document.getElementById('countdown');
 
@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
             countdownElement.innerHTML = `
               <div style="margin-bottom:0.6rem; font-size:1.1rem; opacity:0.9;">🎂 Birthday celebration starts in...</div>
               <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;">
-                <span><strong style="font-size:1.5rem;">${hh}</strong><br>Hours</span>
+                <span><strong style="font-size:1.6rem;">${hh}</strong><br>Hours</span>
                 <span style="font-size:1.8rem; opacity:0.6;">:</span>
-                <span><strong style="font-size:1.5rem;">${mm}</strong><br>Minutes</span>
+                <span><strong style="font-size:1.6rem;">${mm}</strong><br>Minutes</span>
                 <span style="font-size:1.8rem; opacity:0.6;">:</span>
-                <span><strong style="font-size:1.5rem;">${ss}</strong><br>Seconds</span>
+                <span><strong style="font-size:1.6rem;">${ss}</strong><br>Seconds</span>
               </div>
             `;
         } else {
-            // 🎉 Show live birthday age since Aug 14, 2006 at 1:15 PM
+            // 🎉 Show Birthday Wishes & Live Age Counter
             let years = now.getFullYear() - birthDate.getFullYear();
             let months = now.getMonth() - birthDate.getMonth();
             let days = now.getDate() - birthDate.getDate();
@@ -48,16 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (months < 0) { months += 12; years--; }
 
-            const ampm = hours >= 12 ? 'PM' : 'AM';
-            const hours12 = hours % 12 === 0 ? 12 : hours % 12;
+            const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
+            const hours12 = now.getHours() % 12 === 0 ? 12 : now.getHours() % 12;
 
             countdownElement.innerHTML = `
-              <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-bottom:0.5rem;">
-                <span><strong>${years}</strong> Years</span>
-                <span><strong>${months}</strong> Months</span>
-                <span><strong>${days}</strong> Days</span>
+              <div style="margin-bottom: 0.8rem; text-align: center;">
+                <div style="font-size: 1.6rem; color: #FFB7C5; font-family: 'Mochiy Pop One', sans-serif; text-shadow: 0 2px 8px rgba(0,0,0,0.3); margin-bottom: 0.4rem;">
+                  🎉 Happy ${years}th Birthday, Sunmathi! 🎂✨
+                </div>
+                <div style="font-size: 1rem; opacity: 0.9; max-width: 550px; margin: 0 auto 1rem; line-height: 1.5; font-weight: normal;">
+                  Wishing you a day filled with endless joy, laughter, love, and sweet memories. May all your dreams come true! 🌸🌙
+                </div>
               </div>
-              <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;">
+              <div style="display:flex; gap:1.2rem; justify-content:center; flex-wrap:wrap; margin-bottom:0.4rem; font-size:1rem;">
+                <span><strong style="color: #FFB7C5; font-size:1.2rem;">${years}</strong> Years</span>
+                <span><strong style="color: #FFB7C5; font-size:1.2rem;">${months}</strong> Months</span>
+                <span><strong style="color: #FFB7C5; font-size:1.2rem;">${days}</strong> Days</span>
+              </div>
+              <div style="display:flex; gap:1.2rem; justify-content:center; flex-wrap:wrap; opacity: 0.95; font-size:0.95rem;">
                 <span><strong>${hours12}</strong> Hours</span>
                 <span><strong>${minutes}</strong> Minutes</span>
                 <span><strong>${seconds}</strong> Seconds</span>
