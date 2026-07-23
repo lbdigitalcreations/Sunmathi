@@ -1,0 +1,304 @@
+/* ============================================
+   BASE & TYPOGRAPHY
+   ============================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F0F8FF;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.font-anime {
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.text-sakura {
+    color: #FFB7C5;
+}
+
+.bg-navy {
+    background-color: #2c3e50;
+}
+
+/* ============================================
+   SAKURA CANVAS
+   ============================================ */
+#sakura-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* ============================================
+   SCROLLBAR HIDE
+   ============================================ */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.hero-card {
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 90vw;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.crown-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 215, 0, 0.25);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    color: #ffd700;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* ============================================
+   COUNTDOWN / AGE COUNTER
+   ============================================ */
+#countdown {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#countdown div {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0.4rem;
+}
+
+#countdown span {
+    text-align: center;
+    min-width: 60px;
+}
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+main.container {
+    padding: 1rem;
+    max-width: 100%;
+}
+
+/* ============================================
+   TIMELINE / STORY ARC
+   ============================================ */
+.story-arc-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.story-arc-item img {
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 4px solid white;
+    object-fit: cover;
+    max-height: 320px;
+}
+
+/* ============================================
+   GALLERY GRID
+   ============================================ */
+#lightgallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+#lightgallery a {
+    display: block;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+#lightgallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 3px solid white;
+    transition: transform 0.3s ease;
+}
+
+#lightgallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   HALL OF FAME CARDS
+   ============================================ */
+#hall-of-fame-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#hall-of-fame-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#hall-of-fame-scroller .snap-center {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 82vw;
+}
+
+#hall-of-fame-scroller img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* ============================================
+   LETTER / MESSAGE BOX
+   ============================================ */
+.message-box {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 1.5rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    padding: 2rem 1rem 1.5rem !important;
+    font-size: 0.9rem;
+}
+
+footer img {
+    width: 70px !important;
+    height: 70px !important;
+}
+
+/* ============================================
+   TABLET — 640px and up
+   ============================================ */
+@media (min-width: 640px) {
+    #lightgallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #lightgallery a {
+        height: 200px;
+    }
+
+    #hall-of-fame-scroller .snap-center {
+        width: 45vw;
+    }
+
+    main.container {
+        padding: 2rem;
+    }
+}
+
+/* ============================================
+   DESKTOP — 768px and up
+   ============================================ */
+@media (min-width: 768px) {
+    #lightgallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #lightgallery a {
+        height: 250px;
+    }
+
+    #hall-of-fame-scroller .snap-center {
+        width: 30vw;
+    }
+
+    .story-arc-item img {
+        max-height: 400px;
+    }
+
+    main.container {
+        padding: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #countdown {
+        font-size: 1.3rem;
+    }
+
+    footer img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+}
+
+/* ============================================
+   LARGE DESKTOP — 1024px and up
+   ============================================ */
+@media (min-width: 1024px) {
+    #hall-of-fame-scroller .snap-center {
+        width: 24vw;
+    }
+
+    #lightgallery a {
+        height: 260px;
+    }
+}
+
+/* ============================================
+   TOUCH DEVICE IMPROVEMENTS
+   ============================================ */
+@media (hover: none) {
+    /* Scroll buttons hidden on touch — swipe instead */
+    #scroll-left-btn,
+    #scroll-right-btn {
+        display: none !important;
+    }
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Sunmathii🌙🌙!</title>
+
+  <!-- This script pulls in Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- These are for the animations and photo gallery -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
+
+  <!-- Google Fonts for the Anime look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Link to your new external CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <meta property="og:image" content="1.jpg">
+</head>
+
+<body>
+  <!-- Canvas for the falling cherry blossoms -->
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- Section 1: Hero Welcome -->
+  <header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+      <source src="img/sa.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+    <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-card glass-panel">
+          <div class="crown-badge">
+            <i class="fa-solid fa-crown"></i> Queen of My Heart
+          </div>
+
+
+          <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday Sunmathiii🌙 !</h1>
+
+          <div id="countdown" class="mt-6 font-semibold tracking-widest leading-relaxed"></div>
+        </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto p-6 md:p-12">
+
+    <!-- Section 2: A Letter For You -->
+    <section class="my-16 md:my-24 max-w-3xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-anime text-sakura mb-8 drop-shadow-sm">A Special Message For You</h2>
+      <div class="text-left text-lg leading-relaxed space-y-4 bg-white p-8 rounded-lg shadow-lg">
+        <p>Hey mathi 🌙🌙,</p>
+        <p>Wish you a very Happy Birthday mathi 🌙🌙! May god fulfil all your wishes, you have an endless supply of
+          happy days and your dreams turns into reality, A life surrounded with pets and life that will become a manga
+        </p>
+        <p>Thankyou for always being so kind and reason behind everyone smile, Always connected to your roots , A true
+          friend to everyone, You always be yourself and that's your vibe We all are very lucky, we are not in city of
+          gems still we found a real gem.</p>
+        <p class="text-right mt-8">
+          Regards<br>
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: The Timeline -->
+    <section class="my-16 md:my-24">
+      <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Your Story Arc</h2>
+      <div class="space-y-16">
+        <!-- Timeline Item 1 -->
+        <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+          <img src="1.jpg" alt="Memory 1" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-anime text-sakura">🌸 Not By Blood, But By Heart</h3>
+            <p class="mt-2 text-lg italic">
+              "You didn't grow up in the same house as me, but somehow you became the sister I never knew I needed.
+              No birth certificate could ever make this bond more real than it already is."
+            </p>
+            <p class="mt-3 text-sm opacity-70">— Your brother from another mother 🌙</p>
+          </div>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+          <img src="2.jpg" alt="Memory 2" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+          <div class="text-center md:text-right">
+            <h3 class="text-2xl font-anime text-sakura">💫 The Realest Bond</h3>
+            <p class="mt-2 text-lg italic">
+              "They say family is who you're born with. But I believe family is who shows up for you,
+              laughs with you, and stands by you — and that's exactly what you do, every single time."
+            </p>
+            <p class="mt-3 text-sm opacity-70">— Your brother, always in your corner 🤝</p>
+          </div>
+        </div>
+        <!-- Timeline Item 3 -->
+        <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+          <img src="3.jpg" alt="Memory 3"
+            class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-anime text-sakura">🛡️ My Person to Protect</h3>
+            <p class="mt-2 text-lg italic">
+              "Even without the title, I've always felt this big brother instinct around you —
+              to protect you, to cheer for you, and to remind you how extraordinary you are
+              when you forget it yourself."
+            </p>
+            <p class="mt-3 text-sm opacity-70">— Your unofficial big bro 😄</p>
+          </div>
+        </div>
+        <!-- Timeline Item 4 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+          <img src="4.jpg" alt="Memory 4"
+            class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+          <div class="text-center md:text-right">
+            <h3 class="text-2xl font-anime text-sakura">🎂 Here's to You, Mathi</h3>
+            <p class="mt-2 text-lg italic">
+              "On your birthday, I just want to say — the universe was smart enough to put us in each other's lives.
+              You're the sister I chose, and I'd choose you a thousand times over.
+              Wishing you a life as warm, bright, and beautiful as you are. 🌙"
+            </p>
+            <p class="mt-3 text-sm opacity-70">— With all the brother love, always 💛</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Hall of Fame -->
+    <section class="my-16 md:my-24">
+      <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Hall of Fame</h2>
+      <div class="relative">
+        <!-- Scroll Buttons -->
+        <button id="scroll-left-btn"
+          class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button id="scroll-right-btn"
+          class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Scrollable Container -->
+        <div id="hall-of-fame-scroller"
+          class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
+          <div class="flex snap-x snap-mandatory gap-8">
+            <!-- Card 1 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="100">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="5.jpg" alt="Photo 5" class="w-full h-80 object-cover rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Sunshine Smile</h3>
+                <p class="mt-2">"Your smile could light up the darkest room ☀️"</p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="6.jpg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Pure Joy</h3>
+                <p class="mt-2">"Happiness looks so good on you 🌸"</p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="300">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="7.jpg" alt="Photo 7" class="w-full h-80 object-cover rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">The Explorer</h3>
+                <p class="mt-2">"Always ready for the next adventure 🗺️"</p>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="400">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="8.jpg" alt="Photo 8" class="w-full h-80 object-cover rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Radiant Soul</h3>
+                <p class="mt-2">"The world is brighter because you're in it 🌙"</p>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="500">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="9.jpg" alt="Photo 9" class="w-full h-80 object-cover rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">Kindness Queen</h3>
+                <p class="mt-2">"The kindest heart in every room 💖"</p>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up"
+              data-aos-delay="600">
+              <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+                <img src="10.jpg" alt="Photo 10" class="w-full h-80 object-cover rounded-md mb-4">
+                <h3 class="text-2xl font-anime text-sakura">The Real Gem</h3>
+                <p class="mt-2">"We didn't need the city of gems — we already found one 💎"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: The Gallery -->
+    <section class="my-16 md:my-24">
+      <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">The Y.V.A. Collection</h2>
+      <p class="text-center text-lg -mt-8 mb-12">(Your Very-own Adventures)</p>
+      <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="11.jpg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+          <img src="11.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 11">
+        </a>
+        <a href="12.jpg" data-aos="zoom-in" data-aos-delay="100" class="block w-full h-48 md:h-64">
+          <img src="12.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 12">
+        </a>
+        <a href="13.jpg" data-aos="zoom-in" data-aos-delay="200" class="block w-full h-48 md:h-64">
+          <img src="13.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 13">
+        </a>
+        <a href="14.jpg" data-aos="zoom-in" data-aos-delay="300" class="block w-full h-48 md:h-64">
+          <img src="14.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 14">
+        </a>
+        <!-- Row 2 -->
+        <a href="15.jpg" data-aos="zoom-in" data-aos-delay="400" class="block w-full h-48 md:h-64">
+          <img src="15.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 15">
+        </a>
+        <a href="16.jpg" data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
+          <img src="16.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 16">
+        </a>
+        <a href="17.jpg" data-aos="zoom-in" data-aos-delay="600" class="block w-full h-48 md:h-64">
+          <img src="17.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 17">
+        </a>
+        <a href="18.jpg" data-aos="zoom-in" data-aos-delay="700" class="block w-full h-48 md:h-64">
+          <img src="18.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 18">
+        </a>
+        <!-- Row 3 -->
+        <a href="19.jpg" data-aos="zoom-in" data-aos-delay="800" class="block w-full h-48 md:h-64">
+          <img src="19.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 19">
+        </a>
+        <a href="20.jpg" data-aos="zoom-in" data-aos-delay="900" class="block w-full h-48 md:h-64">
+          <img src="20.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 20">
+        </a>
+        <a href="1.jpg" data-aos="zoom-in" data-aos-delay="1000" class="block w-full h-48 md:h-64">
+          <img src="1.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 1">
+        </a>
+        <a href="2.jpg" data-aos="zoom-in" data-aos-delay="1100" class="block w-full h-48 md:h-64">
+          <img src="2.jpg"
+            class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white"
+            alt="Memory 2">
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 6: Finale -->
+    <section class="my-16 md:my-24" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-anime text-center mb-4">Happy Birthday Sunmathii🌙🌙</h2>
+      <div class="max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden bg-navy">
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white text-center"
+    style="padding: 2rem 1rem 1.5rem; background: #0a0a1a; border-top: 1px solid rgba(255,255,255,0.1);">
+    <p style="margin-bottom: 1rem; font-size: 0.95rem; opacity: 0.85; letter-spacing: 0.5px;">Enjoy your day to the
+      fullest. 🎂</p>
+
+    <!-- Divider -->
+    <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 0.8rem auto; max-width: 300px;">
+
+    <!-- LB Digital Creations Branding -->
+    <div
+      style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 0.8rem; flex-wrap: wrap;">
+
+      <!-- LEFT: Logo -->
+      <a href="https://www.lbdigitalcreations.in" target="_blank" rel="noopener noreferrer"
+        title="Visit LB Digital Creations" style="flex-shrink: 0;">
+        <img src="img/media__1784742336341.jpg" alt="LB Digital Creations Logo"
+          style="width: 90px; height: 90px; object-fit: contain; border-radius: 50%; border: 2px solid rgba(212, 175, 55, 0.6); box-shadow: 0 0 14px rgba(212,175,55,0.45); display: block;">
+      </a>
+
+      <!-- RIGHT: Contact Details -->
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.25rem; text-align: left;">
+        <p style="margin: 0; font-size: 0.78rem; opacity: 0.65; letter-spacing: 0.3px;">Visit our official website</p>
+        <a href="https://www.lbdigitalcreations.in" target="_blank" rel="noopener noreferrer"
+          style="color: #d4af37; text-decoration: none; font-weight: 700; font-size: 1rem; letter-spacing: 0.5px; transition: opacity 0.2s; line-height: 1.2;"
+          onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
+          LB Digital Creations
+        </a>
+        <p style="margin: 0; font-size: 0.82rem; opacity: 0.75;">
+          📞 <a href="tel:6381366088"
+            style="color: inherit; text-decoration: none; letter-spacing: 0.5px;">6381366088</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- These scripts are for the animations and photo gallery -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+  <!-- Link to your new external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+
+</html>
